@@ -90,7 +90,7 @@ export function Phone({ label, placeHolder }) {
             <p className="text-sm text-center">{val}</p>
             {hover && (
               <button
-                className="action-btn absolute"
+                className="action-btn absolutePositioned"
                 onClick={() => {
                   setEditing(true);
                 }}
@@ -198,7 +198,7 @@ export function Email({ label, placeHolder }) {
             <p className="text-sm text-center">{val}</p>
             {hover && (
               <button
-                className="action-btn absolute"
+                className="action-btn absolutePositioned"
                 onClick={() => {
                   setEditing(true);
                 }}
@@ -317,12 +317,15 @@ export function Github({ label, placeHolder }) {
             </defs>
           </svg>
           <div className="relative">
-            <a className="text-sm text-center" href={"https://github.com/" + val}>
+            <a
+              className="text-sm text-center transition duration-100 ease-in-out hover:underline"
+              href={"https://github.com/" + val}
+            >
               @{val}
             </a>
             {hover && (
               <button
-                className="action-btn absolute"
+                className="action-btn absolutePositioned"
                 onClick={() => {
                   setEditing(true);
                 }}

@@ -18,7 +18,7 @@
   @apply p-1 rounded-sm cursor-pointer bg-slate-500 transition duration-100 ease-in-out hover:bg-slate-400 active:bg-slate-500;
 }
 
-.action-btn.absolute {
+.action-btn.absolutePositioned {
   @apply absolute -right-7 top-1/2 -translate-y-1/2;
 }
 
@@ -28,4 +28,12 @@
 
 .contact-icon {
   @apply stroke-slate-200 transition duration-100 ease-in-out mr-1;
+}
+
+.section-header {
+  @apply text-lg font-semibold text-blue-500;
+}
+
+.header-hr {
+  @apply w-full h-[1px] bg-blue-300 flex-[1];
 }

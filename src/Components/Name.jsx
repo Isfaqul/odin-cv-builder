@@ -47,7 +47,7 @@ export function Name({ label }) {
             <p className="text-3xl text-center">{val}</p>
             {hover && (
               <button
-                className="action-btn absolute"
+                className="action-btn absolutePositioned"
                 onClick={() => {
                   setEditing(true);
                 }}
