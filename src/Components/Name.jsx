@@ -12,23 +12,23 @@ export function Name({ label }) {
   return (
     <>
       {isEditing ? (
-        <div className="text-center">
+        <div className="text-center flex justify-center items-center gap-1">
           <label htmlFor={label}></label>
           <input
             id={label}
             type="text"
-            className="border border-slate-400 rounded-sm text-3xl text-center placeholder:text-neutral-500 hover:outline "
+            className="input input-3xl"
             onChange={(e) => {
               setVal(e.target.value);
             }}
             placeholder="Your Name"
             value={val}
           />
-          <button className="p-1 rounded-sm cursor-pointer" type="button" onClick={handleOnClick}>
+          <button className="action-btn" type="button" onClick={handleOnClick}>
             <svg
-              className="stroke-slate-200 transition duration-100 ease-in-out hover:stroke-slate-400 active:stroke-slate-500"
-              width={16}
-              height={16}
+              className="interactive-icon"
+              width={14}
+              height={14}
               viewBox="0 0 14 14"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -47,15 +47,15 @@ export function Name({ label }) {
             <p className="text-3xl text-center">{val}</p>
             {hover && (
               <button
-                className="p-1 rounded-sm cursor-pointer absolute -right-7 top-1/2 -translate-y-1/2"
+                className="action-btn absolute"
                 onClick={() => {
                   setEditing(true);
                 }}
               >
                 <svg
-                  className="stroke-slate-200 transition duration-100 ease-in-out hover:stroke-slate-400 active:stroke-slate-500"
-                  width={16}
-                  height={16}
+                  className="interactive-icon"
+                  width={14}
+                  height={14}
                   viewBox="0 0 14 14"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"

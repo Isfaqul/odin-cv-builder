@@ -12,10 +12,10 @@ export function Phone({ label, placeHolder }) {
   return (
     <>
       {isEditing ? (
-        <div className="text-center flex justify-center">
+        <div className="text-center flex justify-center gap-1">
           <label htmlFor={label} className="flex items-center justify-center">
             <svg
-              className="stroke-slate-200 transition duration-100 ease-in-out mr-2"
+              className="contact-icon"
               width={14}
               height={14}
               viewBox="0 0 14 14"
@@ -38,7 +38,7 @@ export function Phone({ label, placeHolder }) {
             <input
               id={label}
               type="text"
-              className="border border-slate-400 rounded-sm text-sm text-center placeholder:text-neutral-500 hover:outline "
+              className="border border-slate-600 rounded-sm text-sm text-center placeholder:text-neutral-500 hover:outline "
               onChange={(e) => {
                 setVal(e.target.value);
               }}
@@ -46,12 +46,11 @@ export function Phone({ label, placeHolder }) {
               value={val}
             />
           </label>
-
-          <button className="p-1 rounded-sm cursor-pointer" type="button" onClick={handleOnClick}>
+          <button className="action-btn" type="button" onClick={handleOnClick}>
             <svg
-              className="stroke-slate-200 transition duration-100 ease-in-out hover:stroke-slate-400 active:stroke-slate-500"
-              width={16}
-              height={16}
+              className="interactive-icon"
+              width={14}
+              height={14}
               viewBox="0 0 14 14"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -62,12 +61,12 @@ export function Phone({ label, placeHolder }) {
         </div>
       ) : (
         <div
-          className="flex justify-center gap-1 items-center"
+          className="flex justify-center gap-1 items-center px-5"
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
           <svg
-            className="stroke-slate-200 transition duration-100 ease-in-out mr-2"
+            className="contact-icon"
             width={14}
             height={14}
             viewBox="0 0 14 14"
@@ -91,15 +90,15 @@ export function Phone({ label, placeHolder }) {
             <p className="text-sm text-center">{val}</p>
             {hover && (
               <button
-                className="p-1 rounded-sm cursor-pointer absolute -right-7 top-1/2 -translate-y-1/2"
+                className="action-btn absolute"
                 onClick={() => {
                   setEditing(true);
                 }}
               >
                 <svg
-                  className="stroke-slate-200 transition duration-100 ease-in-out hover:stroke-slate-400 active:stroke-slate-500"
-                  width={16}
-                  height={16}
+                  className="interactive-icon"
+                  width={14}
+                  height={14}
                   viewBox="0 0 14 14"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -134,10 +133,10 @@ export function Email({ label, placeHolder }) {
   return (
     <>
       {isEditing ? (
-        <div className="text-center flex justify-center">
+        <div className="text-center flex justify-center gap-1">
           <label htmlFor={label} className="flex items-center justify-center">
             <svg
-              className="stroke-slate-200 transition duration-100 ease-in-out mr-2"
+              className="contact-icon"
               width={14}
               height={14}
               viewBox="0 0 14 14"
@@ -153,7 +152,7 @@ export function Email({ label, placeHolder }) {
             <input
               id={label}
               type="text"
-              className="border border-slate-400 rounded-sm text-sm text-center placeholder:text-neutral-500 hover:outline "
+              className="border border-slate-600 rounded-sm text-sm text-center placeholder:text-neutral-500 hover:outline "
               onChange={(e) => {
                 setVal(e.target.value);
               }}
@@ -162,11 +161,11 @@ export function Email({ label, placeHolder }) {
             />
           </label>
 
-          <button className="p-1 rounded-sm cursor-pointer" type="button" onClick={handleOnClick}>
+          <button className="action-btn" type="button" onClick={handleOnClick}>
             <svg
-              className="stroke-slate-200 transition duration-100 ease-in-out hover:stroke-slate-400 active:stroke-slate-500"
-              width={16}
-              height={16}
+              className="interactive-icon"
+              width={14}
+              height={14}
               viewBox="0 0 14 14"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -177,12 +176,12 @@ export function Email({ label, placeHolder }) {
         </div>
       ) : (
         <div
-          className="flex justify-center gap-1 items-center"
+          className="flex justify-center gap-1 items-center px-5"
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
           <svg
-            className="stroke-slate-200 transition duration-100 ease-in-out mr-2"
+            className="contact-icon"
             width={14}
             height={14}
             viewBox="0 0 14 14"
@@ -199,15 +198,15 @@ export function Email({ label, placeHolder }) {
             <p className="text-sm text-center">{val}</p>
             {hover && (
               <button
-                className="p-1 rounded-sm cursor-pointer absolute -right-7 top-1/2 -translate-y-1/2"
+                className="action-btn absolute"
                 onClick={() => {
                   setEditing(true);
                 }}
               >
                 <svg
-                  className="stroke-slate-200 transition duration-100 ease-in-out hover:stroke-slate-400 active:stroke-slate-500"
-                  width={16}
-                  height={16}
+                  className="interactive-icon"
+                  width={14}
+                  height={14}
                   viewBox="0 0 14 14"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -242,10 +241,10 @@ export function Github({ label, placeHolder }) {
   return (
     <>
       {isEditing ? (
-        <div className="text-center flex justify-center">
+        <div className="text-center flex justify-center gap-1">
           <label htmlFor={label} className="flex items-center justify-center">
             <svg
-              className="stroke-slate-200 transition duration-100 ease-in-out mr-2"
+              className="contact-icon"
               width={14}
               height={14}
               viewBox="0 0 14 14"
@@ -268,7 +267,7 @@ export function Github({ label, placeHolder }) {
             <input
               id={label}
               type="text"
-              className="border border-slate-400 rounded-sm text-sm text-center placeholder:text-neutral-500 hover:outline "
+              className="border border-slate-600 rounded-sm text-sm text-center placeholder:text-neutral-500 hover:outline "
               onChange={(e) => {
                 setVal(e.target.value);
               }}
@@ -277,11 +276,11 @@ export function Github({ label, placeHolder }) {
             />
           </label>
 
-          <button className="p-1 rounded-sm cursor-pointer" type="button" onClick={handleOnClick}>
+          <button className="action-btn" type="button" onClick={handleOnClick}>
             <svg
-              className="stroke-slate-200 transition duration-100 ease-in-out hover:stroke-slate-400 active:stroke-slate-500"
-              width={16}
-              height={16}
+              className="interactive-icon"
+              width={14}
+              height={14}
               viewBox="0 0 14 14"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -292,12 +291,12 @@ export function Github({ label, placeHolder }) {
         </div>
       ) : (
         <div
-          className="flex justify-center gap-1 items-center"
+          className="flex justify-center gap-1 items-center px-5"
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
           <svg
-            className="stroke-slate-200 transition duration-100 ease-in-out mr-2"
+            className="contact-icon"
             width={14}
             height={14}
             viewBox="0 0 14 14"
@@ -323,15 +322,15 @@ export function Github({ label, placeHolder }) {
             </a>
             {hover && (
               <button
-                className="p-1 rounded-sm cursor-pointer absolute -right-7 top-1/2 -translate-y-1/2"
+                className="action-btn absolute"
                 onClick={() => {
                   setEditing(true);
                 }}
               >
                 <svg
-                  className="stroke-slate-200 transition duration-100 ease-in-out hover:stroke-slate-400 active:stroke-slate-500"
-                  width={16}
-                  height={16}
+                  className="interactive-icon"
+                  width={14}
+                  height={14}
                   viewBox="0 0 14 14"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
