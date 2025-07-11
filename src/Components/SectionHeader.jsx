@@ -1,4 +1,6 @@
-export function SectionHeader({ name }) {
+import React from "react";
+
+function SectionHeader({ name }) {
   return (
     <hgroup className="flex items-center gap-7">
       <h2 className="section-header">{name}</h2>
@@ -6,3 +8,5 @@ export function SectionHeader({ name }) {
     </hgroup>
   );
 }
+
+export default React.memo(SectionHeader);

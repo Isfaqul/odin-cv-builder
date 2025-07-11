@@ -33,7 +33,7 @@ export function Experience() {
     <div className="relative">
       <div className="flex justify-end px-0.5 absolute -top-9 right-0 bg-slate-100">
         <button
-          className="cursor-pointer bg-slate-500 p-1 rounded-sm stroke-slate-200 active:bg-slate-600"
+          className="cursor-pointer bg-slate-500 p-1 rounded-sm stroke-slate-200 active:bg-slate-600 print:hidden hide-on-print"
           onClick={() => {
             setEditing(!isEditing);
           }}
