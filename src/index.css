@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @media print {
-  .print-hidden {
+  .hide-on-print {
     display: none !important;
   }
 }

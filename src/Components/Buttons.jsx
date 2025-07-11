@@ -2,6 +2,7 @@ import { SvgAdd, SvgEdit, SvgRemove, SvgSave } from "./SVGIcons";
 
 const styles = {
   button: "cursor-pointer bg-slate-500 p-1 rounded-sm stroke-slate-200 active:bg-slate-600",
+  customButton: "cursor-pointer px-1 rounded-sm stroke-slate-200 text-xs uppercase",
   addButton:
     "text-xs uppercase flex items-center text-slate-200 gap-1 text-bold cursor-pointer bg-slate-500 px-2 py-0.5 rounded-sm stroke-slate-200 active:bg-slate-600",
 };
@@ -35,6 +36,24 @@ export function AddIconBtn({ onClick, text = "" }) {
     <button type="button" className={styles.addButton} onClick={onClick}>
       {text && <span>{text}</span>}
       <SvgAdd />
+    </button>
+  );
+}
+
+export function AddIconBtnCustom({ onClick, text = "", style }) {
+  return (
+    <button type="button" className={styles.customButton + " " + style} onClick={onClick}>
+      {text && <span>{text}</span>}
+      <SvgAdd />
+    </button>
+  );
+}
+
+export function RemoveIconBtnCustom({ onClick, text = "", style }) {
+  return (
+    <button type="button" className={styles.customButton + " " + style} onClick={onClick}>
+      {text && <span>{text}</span>}
+      <SvgRemove />
     </button>
   );
 }
